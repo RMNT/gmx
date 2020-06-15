@@ -1,0 +1,29 @@
+from google.colab import drive
+drive.mount('/content/drive')
+
+import sqlite3
+import feather
+import ast
+import numpy as np
+import pandas as pd
+
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report
+from sklearn.metrics import *
+from sklearn.preprocessing import OneHotEncoder
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+import keras.utils as kerasutils
+
+from fastai import *
+from fastai.tabular import *
+
+np.set_printoptions(threshold=sys.maxsize)
+
+%cd 'drive/My Drive/Colab Notebooks'
+
+from structured import * # fast.ai 0.7 from a local file. https://github.com/mindsdb/lightwood/issues/75
